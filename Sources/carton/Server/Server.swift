@@ -84,7 +84,7 @@ final class Server {
     watcher = try Watcher(pathsToWatch)
 
     var env = Environment(name: verbose ? "development" : "production", arguments: ["vapor"])
-    localURL = "http://127.0.0.1:\(port)/"
+    localURL = "http://0.0.0.0:\(port)/"
     self.skipAutoOpen = skipAutoOpen
 
     try LoggingSystem.bootstrap(from: &env)
